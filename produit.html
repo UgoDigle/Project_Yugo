@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Vérifiez les informations nutritionnelles et les ingrédients de vos aliments préférés avec notre outil de vérification de données alimentaires. Obtenez des informations précises sur les calories, les glucides, les graisses, les protéines et les allergènes pour faire des choix alimentaires éclairés."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <title>Yugo, l'application qui vous veut du bien!</title>
+  </head>
+  <body class="d-flex flex-column vh-100">
+    <header>
+      <nav class="navbar sticky-top">
+        <div class="container-fluid m-3">
+          <a class="navbar-brand" href="index.html">
+            <img src="/ressources/aubergine.webp" alt="logo accueil" width="50px" />
+          </a>
+          <form class="d-none d-md-flex col-md-6" role="search" action="produit.html">
+            <input class="form-control me-2" type="search" placeholder="Numéro de code-barres" aria-label="Search" />
+            <button class="btn btn-outline-success bouton2" type="submit">Go!</button>
+          </form>
+          <a class="navbar-brand" href="https://fr.wikipedia.org/wiki/Aide">
+            <img src="/ressources/question.svg" alt="aide" width="50px" />
+          </a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container flex-shrink-0">
+        <div class="row">
+          <div class="col-12 col-md-3 offset-md-1 text-center">
+            <img
+              class="img-fluid w-50 d-md-none"
+              src="ressources/aubergines_caponata.jpg"
+              alt="boîte d'aubergines caponata"
+            />
+            <img
+              class="img-fluid w-100 d-none d-md-block"
+              src="ressources/aubergines_caponata.jpg"
+              alt="boîte d'aubergines caponata"
+            />
+            <p>375g aubergines en caponata - D'aucy - 375 g</p>
+            <div class="text-start">
+              <h4 class="text-decoration-underline">Description du produit</h4>
+              <p>Aubergines en caponata cuisinées à l'huile d'olive vierge (3.2%)</p>
+            </div>
+          </div>
+          <div class="col-12 offset-md-1 col-md-6 icones">
+            <div class="row">
+              <div class="col-12 col-md-6 text-center">
+                <h4 class="text-decoration-underline">Scores</h4>
+                <img class="mb-3 img-fluid" src="ressources/Nutri-score-C.svg" alt="nutri-score C" /> <br />
+                <img class="mb-3 img-fluid" src="ressources/NOVA_group_3.svg" alt="groupe NOVA 3" /> <br />
+                <img class="mb-3 img-fluid" src="ressources/Eco-score A.svg" alt="Eco-Score A" />
+              </div>
+              <div class="col-12 col-md-6 text-center">
+                <h4 class="text-decoration-underline">Labels</h4>
+                <img class="mb-3 img-fluid" src="ressources/Green_dot_logo.svg" alt="label point vert" /> <br />
+              </div>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-md-3 offset-md-1 col-12">
+              <h4 class="text-decoration-underline">Liste d'ingrédients</h4>
+              <p>
+                Aubergines fraîches et pré frites en dés (aubergines, huile de tournesol) (42%), tomates en morceaux,
+                jus de tomates, oignons en dés, garniture de CÉLERI en dés, huile d'olive vierge (3.2%), sucre, olives
+                vertes en rondelles, raisins secs, sel, câpres, amidon, basilic, ail en poudre, acidifiant : acide
+                lactique, poivre blanc en poudre.
+              </p>
+            </div>
+            <div class="col-12 offset-md-1 col-md-6">
+              <h4 class="text-decoration-underline">Tableau nutritionnel</h4>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Tel que vendu pour 100 g / 100 ml</th>
+                    <th scope="col">Tel que vendu par portion (15g)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Energie</th>
+                    <td>354 kj (85 kcal)</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Matières grasses</th>
+                    <td>5,1g</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Acides gras saturés</th>
+                    <td>0,7g</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Glucides</th>
+                    <td>7,6g</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Sucres</th>
+                    <td>6,6g</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Fibres alimentaires</th>
+                    <td>2,4g</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Protéines</th>
+                    <td>1g</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Sel</th>
+                    <td>1,1g</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="mt-auto py-3" style="background-color: rgba(7, 126, 5, 1)">
+      <a href="legal.html">Mentions légales</a>
+      <a href="contact.html">Contact</a>
+    </footer>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"
+  ></script>
+</html>
