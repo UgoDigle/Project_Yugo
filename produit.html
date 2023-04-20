@@ -26,8 +26,14 @@
           <a class="navbar-brand" href="index.html">
             <img src="/ressources/aubergine.webp" alt="logo accueil" width="50px" />
           </a>
-          <form class="d-none d-md-flex col-md-6" role="search" action="produit.html">
-            <input class="form-control me-2" type="search" placeholder="Numéro de code-barres" aria-label="Search" />
+          <form onsubmit="search(event)" class="d-none d-md-flex col-md-6" role="search" action="produit.html">
+            <input
+              id="searchInput"
+              class="form-control me-2"
+              type="search"
+              placeholder="Numéro de code-barres"
+              aria-label="Search"
+            />
             <button class="btn btn-outline-success bouton2" type="submit">Go!</button>
           </form>
           <a class="navbar-brand" href="https://fr.wikipedia.org/wiki/Aide">
@@ -41,17 +47,17 @@
         <div class="row">
           <div class="col-12 col-md-3 offset-md-1 text-center">
             <img
-              class="img-fluid w-50 d-md-none"
+              class="image_produit img-fluid w-50 d-md-none"
               src="ressources/aubergines_caponata.jpg"
               alt="boîte d'aubergines caponata"
             />
             <img
-              class="img-fluid w-100 d-none d-md-block"
+              class="image_produit img-fluid w-100 d-none d-md-block"
               src="ressources/aubergines_caponata.jpg"
               alt="boîte d'aubergines caponata"
             />
-            <p>375g aubergines en caponata - D'aucy - 375 g</p>
-            <div class="text-start">
+            <p class="nom_du_produit">375g aubergines en caponata - D'aucy - 375 g</p>
+            <div class="description_produit text-start">
               <h4 class="text-decoration-underline">Description du produit</h4>
               <p>Aubergines en caponata cuisinées à l'huile d'olive vierge (3.2%)</p>
             </div>
@@ -60,9 +66,9 @@
             <div class="row">
               <div class="col-12 col-md-6 text-center">
                 <h4 class="text-decoration-underline">Scores</h4>
-                <img class="mb-3 img-fluid" src="ressources/Nutri-score-C.svg" alt="nutri-score C" /> <br />
-                <img class="mb-3 img-fluid" src="ressources/NOVA_group_3.svg" alt="groupe NOVA 3" /> <br />
-                <img class="mb-3 img-fluid" src="ressources/Eco-score A.svg" alt="Eco-Score A" />
+                <img class="nutriscore mb-3 img-fluid" src="ressources/Nutri-score-C.svg" alt="nutri-score C" /> <br />
+                <img class="novascore mb-3 img-fluid" src="ressources/NOVA_group_3.svg" alt="groupe NOVA 3" /> <br />
+                <img class="ecoscore mb-3 img-fluid" src="ressources/Eco-score A.svg" alt="Eco-Score A" />
               </div>
               <div class="col-12 col-md-6 text-center">
                 <h4 class="text-decoration-underline">Labels</h4>
@@ -71,7 +77,7 @@
             </div>
           </div>
           <div class="row mt-5">
-            <div class="col-md-3 offset-md-1 col-12">
+            <div class="liste_ingredients col-md-3 offset-md-1 col-12">
               <h4 class="text-decoration-underline">Liste d'ingrédients</h4>
               <p>
                 Aubergines fraîches et pré frites en dés (aubergines, huile de tournesol) (42%), tomates en morceaux,
@@ -86,50 +92,49 @@
                 <thead>
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Tel que vendu pour 100 g / 100 ml</th>
-                    <th scope="col">Tel que vendu par portion (15g)</th>
+                    <th scope="col" colspan="2">Tel que vendu pour 100 g / 100 ml</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
+                  <tr id="energie">
                     <th scope="row">Energie</th>
-                    <td>354 kj (85 kcal)</td>
-                    <td>-</td>
+                    <td class="quantite">354</td>
+                    <td class="unite">Kcal</td>
                   </tr>
-                  <tr>
+                  <tr id="matieres_grasses">
                     <th scope="row">Matières grasses</th>
-                    <td>5,1g</td>
-                    <td>-</td>
+                    <td class="quantite">x</td>
+                    <td class="unite">g</td>
                   </tr>
-                  <tr>
-                    <th scope="row">Acides gras saturés</th>
-                    <td>0,7g</td>
-                    <td>-</td>
+                  <tr id="acides_gras_satures">
+                    <th scope="row">&nbsp;dont acides gras saturés</th>
+                    <td class="quantite">x</td>
+                    <td class="unite">g</td>
                   </tr>
-                  <tr>
+                  <tr id="glucides">
                     <th scope="row">Glucides</th>
-                    <td>7,6g</td>
-                    <td>-</td>
+                    <td class="quantite">x</td>
+                    <td class="unite">g</td>
                   </tr>
-                  <tr>
-                    <th scope="row">Sucres</th>
-                    <td>6,6g</td>
-                    <td>-</td>
+                  <tr id="sucres">
+                    <th scope="row">&nbsp;dont sucres</th>
+                    <td class="quantite">x</td>
+                    <td class="unite">g</td>
                   </tr>
-                  <tr>
+                  <tr id="fibres_alimentaires">
                     <th scope="row">Fibres alimentaires</th>
-                    <td>2,4g</td>
-                    <td>-</td>
+                    <td class="quantite">x</td>
+                    <td class="unite">g</td>
                   </tr>
-                  <tr>
+                  <tr id="proteines">
                     <th scope="row">Protéines</th>
-                    <td>1g</td>
-                    <td>-</td>
+                    <td class="quantite">x</td>
+                    <td class="unite">g</td>
                   </tr>
-                  <tr>
+                  <tr id="sel">
                     <th scope="row">Sel</th>
-                    <td>1,1g</td>
-                    <td>-</td>
+                    <td class="quantite">x</td>
+                    <td class="unite">g</td>
                   </tr>
                 </tbody>
               </table>
@@ -148,4 +153,5 @@
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"
   ></script>
+  <script src="index.js"></script>
 </html>

@@ -26,6 +26,7 @@ body {
 .bouton:hover,
 .chance:hover {
   color: rgba(7, 126, 5);
+  font-weight: bold;
   border: 1px solid rgba(7, 126, 5);
   background-color: white;
 }

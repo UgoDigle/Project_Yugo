@@ -47,25 +47,25 @@
             <img class="preview" width="25%" src="ressources/vraie_img_accueil.png" alt="capture d'écran" />
           </section>
           <section class="col-12 col-md-4 offset-md-1 text-center">
-            <form action="produit.html">
+            <form onsubmit="search(event)" role="search" action="produit.html">
               <input
+                id="searchInput"
                 type="text"
                 class="form-control barre_de_recherche"
                 placeholder="Numéro de code-barres"
                 aria-label="barre de recherche"
                 aria-describedby="button-addon2"
               />
-              <a href="produit.html">
-                <button
-                  title="bouton recherche"
-                  class="btn btn-link bouton"
-                  type="button"
-                  id="button-addon2"
-                  style="text-decoration: none"
-                >
-                  Go!
-                </button></a
+
+              <button
+                title="bouton recherche"
+                class="btn btn-link bouton"
+                type="submit"
+                id="button-addon2"
+                style="text-decoration: none"
               >
+                Go!
+              </button>
             </form>
             <br />
             <a href="produit.html"
@@ -87,4 +87,5 @@
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"
   ></script>
+  <script src="index.js"></script>
 </html>

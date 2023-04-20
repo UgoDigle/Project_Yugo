@@ -22,12 +22,18 @@
   <body class="d-flex flex-column vh-100">
     <header>
       <nav class="navbar sticky-top">
-        <div class="container-fluid m-3" >
+        <div class="container-fluid m-3">
           <a class="navbar-brand" href="index.html">
             <img src="/ressources/aubergine.webp" alt="logo accueil" width="50px" />
           </a>
-          <form class="d-none d-md-flex col-md-6" role="search" action="produit.html">
-            <input class="form-control me-2" type="search" placeholder="Numéro de code-barres" aria-label="Search" />
+          <form onsubmit="search(event)" class="d-none d-md-flex col-md-6" role="search" action="produit.html">
+            <input
+              id="searchValue"
+              class="form-control me-2"
+              type="search"
+              placeholder="Numéro de code-barres"
+              aria-label="Search"
+            />
             <button class="btn btn-outline-success bouton2" type="submit">Go!</button>
           </form>
           <a class="navbar-brand" href="https://fr.wikipedia.org/wiki/Aide">
@@ -95,4 +101,5 @@
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"
   ></script>
+  <script src="index.js"></script>
 </html>
