@@ -1,9 +1,26 @@
 {
   "cSpell.words": [
     "D'aucy",
+    "ecoscore",
+    "Ecoscore",
+    "energie",
     "icones",
+    "matieres",
     "moncomparateur",
+    "novascore",
+    "Novascore",
     "nutri",
+    "nutriscore",
+    "Nutriscore",
+    "proteines",
+    "quantite",
     "yugo"
+  ],
+  "indentRainbow.colors": [
+
+    "rgba(255,255,64,0.2)",
+    "rgba(127,255,127,0.2)",
+    "rgba(255,127,255,0.2)",
+    "rgba(79,236,236,0.2)"
   ]
 }
