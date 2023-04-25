@@ -1,8 +1,9 @@
-document.querySelector("form[role=search]").addEventListener("submit", search);
+document.addEventListener("DOMContentLoaded", search);
 
-function search(event) {
-  event.preventDefault();
-  const searchValue = document.querySelector("#searchInput").value;
+function search() {
+  //   event.preventDefault();
+  //   const searchValue = document.querySelector("#searchInput").value;
+  const searchValue = new URLSearchParams(document.location.search).get("q");
   const apiUrl = `https://world.openfoodfacts.org/api/v0/product/${searchValue}.json?fields=labels,generic_name,ingredients_text,nutriments,product_name,ecoscore_grade,nutriscore_grade,image_front_url,nova_group`;
   console.log(apiUrl);
   fetch(apiUrl)
@@ -132,7 +133,7 @@ function showLabel(cond, id, src, alt) {
   });
 }
 function showLabels(p) {
-  l = p.labels.split(", ");
+  l = p.labels.split(",").map((e) => e.trim());
   while (labelContainer.nextSibling) {
     labelContainer.nextSibling.remove();
   }
@@ -140,5 +141,5 @@ function showLabels(p) {
   showLabel(["AB Agriculture Biologique"], "AB", "ressources/Labels/AB.svg", "label agriculture biologique");
   showLabel(["EU Organic"], "EU_bio", "ressources/Labels/EU_Organic.svg", "label bio européen");
   showLabel(["PDO"], "aop", "ressources/Labels/aop.svg", "label appellation d'origine protégée");
-  showLabel(["PGI"], "igp", "ressources/Labels/igp.svg", "label indication géographique protégée");
+  showLabel(["PGI", "IGP"], "igp", "ressources/Labels/igp.svg", "label indication géographique protégée");
 }
